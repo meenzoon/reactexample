@@ -1,13 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import './index.css';
-import App from "./App";
+import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
-  <App name="A2TEC">
-    <h1> Hello DaoolDNS </h1>
-  </App>,
+  <App></App>,
   document.getElementById("root")
 );
 
