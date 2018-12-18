@@ -42,7 +42,7 @@ export default class Contact extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState){
-        if(JSON.stringify(prevState.contactData) != JSON.stringify(this.state.contactData)){
+        if(JSON.stringify(prevState.contactData) !== JSON.stringify(this.state.contactData)){
             localStorage.contactData = JSON.stringify(this.state.contactData);
         }
     }
