@@ -6,9 +6,18 @@ class Control extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.props.onPlus}>+</button>
-                <button onClick={this.props.onSubtract}>-</button>
-                <button onClick={this.props.onRadomizeColor}>Randomize Color</button>
+                <button 
+                    onClick={this.props.onPlus}>
+                    +
+                </button>
+                <button 
+                    onClick={this.props.onSubtract}>
+                    -
+                </button>
+                <button 
+                    onClick={this.props.onRadomizeColor}>
+                    Randomize Color
+                </button>
             </div>
         );
     }
