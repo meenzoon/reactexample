@@ -16,31 +16,38 @@ module.exports = {
     },
 
     module: {
-        rules: [{
-            test: /\.js$/,
-            exclude: /node_modules/,
-            use: [{
-                loader: 'babel-loader',
-                options: {
-                    cacheDirectory: true,
-                    presets: ['@babel/preset-env', '@babel/preset-react']
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            cacheDirectory: true,
+                            presets: [
+                                '@babel/preset-env',
+                                '@babel/preset-react'
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.css$/,
+                use: {
+                    loader: 'css-loader'
                 }
-            }]
-        }, {
-            test: /\.css$/,
-            use: {
-                loader: 'css-loader'
+            },
+            {
+                test: /\.svg$/,
+                use: {
+                    loader: 'file-loader'
+                }
             }
-        }, {
-            test: /\.svg$/,
-            use: {
-                loader: 'file-loader'
-            }
-        }]
+        ]
     },
 
     mode: 'development',
-    plugins: [
-        new webpack.HotModuleReplacementPlugin()
-    ]
+    plugins: [new webpack.HotModuleReplacementPlugin()]
 };
